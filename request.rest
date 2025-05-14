@@ -1,0 +1,27 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/2
+
+###
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "username": "yayayy",
+  "status": "Done",
+  "email": "yayasdsn@gmail.com",
+  "note": "This is a note",
+  "deadline": "2025-03-30"
+}
+
+###
+PATCH http://localhost:5000/users/1
+Content-Type: application/json
+
+{
+  "deadline": "2025-03-14"
+  }
+
+###
+DELETE http://localhost:5000/users/1
