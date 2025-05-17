@@ -1,11 +1,11 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('note_db','root','', {
-    host: 'localhost',
+const db = new Sequelize('notedb','habib','habib123', {
+    host: '34.101.248.121', // gunakan Public IP Cloud SQL
     dialect: 'mysql',
     port: 3306,
-        dialectOptions: {
-        connectTimeout: 30000,  // Timeout lebih lama (30 detik)
+    dialectOptions: {
+        connectTimeout: 30000,
     },
 });
 
