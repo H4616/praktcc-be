@@ -32,7 +32,7 @@ steps:
         "deploy",
         "be-rest",
         "--image",
-        "gcr.io/$PROJECT_ID/tcc-be-rest",
+        "gcr.io/$PROJECT_ID/tcc-be-rest-note",
         "--timeout",
         "1000s",
         "--port",
