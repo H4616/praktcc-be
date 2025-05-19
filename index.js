@@ -1,6 +1,16 @@
 import express from "express";
 import cors from "cors";
 import UserRoute from "./routes/UserRoute.js";
+import Auth from "./models/AuthModel.js";
+
+
+try{
+  await db.authenticate();
+  console.log('Koneksi ke database berhasil!');
+  await Auth.sync();
+} catch (err) {
+  console.error('Koneksi ke database gagal:', err);
+}
 
 const app = express();
 app.use(cors())

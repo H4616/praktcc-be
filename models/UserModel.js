@@ -7,10 +7,11 @@ const User = db.define('users', {
     status: DataTypes.STRING,
     email: DataTypes.STRING,
     note: DataTypes.TEXT,
-    deadline: DataTypes.DATE
+    deadline: DataTypes.DATE,
 }, {
     freezeTableName: true
 });
+
 
 export default User;
 
