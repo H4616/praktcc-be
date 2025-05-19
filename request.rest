@@ -8,11 +8,11 @@ POST  http://localhost:5000/users
 Content-Type: application/json
 
 {
-  "username": "yayayy",
+  "username": "crfr",
   "status": "Done",
-  "email": "yayasdsn@gmail.com",
+  "email": "rgrfn@gmail.com",
   "note": "This is a note",
-  "deadline": "2025-03-30"
+  "deadline": "2025-04-30"
 }
 
 ###
@@ -25,3 +25,35 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/users/1
+
+###
+GET http://localhost:5000/auth
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInVzZXJOYW1lIjoiaGFiaWIiLCJ1c2VyRW1haWwiOiJoYWJpYmFubmFmaUBnbWFpbC5jb20iLCJpYXQiOjE3NDc2NTU5ODYsImV4cCI6MTc0NzY1NjAxNn0.ANyRBbxAPx5tXEK3ZCIlI3blP5C6HAiEvGDN1rVyG5k
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "habib",
+  "password": "habib123",
+  "email": "habibannafi@gmail.com",
+  "confrimPassword": "habib123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "password": "habib123",
+  "email": "habibannafi@gmail.com"
+}
+
+
+###
+GET http://localhost:5000/token
+
+
+###
+DELETE http://localhost:5000/logout
