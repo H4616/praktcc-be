@@ -12,6 +12,7 @@ try{
   console.error('Koneksi ke database gagal:', err);
 }
 
+const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors())
 app.use(express.json())
@@ -22,4 +23,4 @@ app.get("/", (req, res) => {
   });
   
 
-app.listen(8080, ()=> console.log('Server up and running...'));
+app.listen(process.env.PORT, ()=> console.log('Server up and running...'));
