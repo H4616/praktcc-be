@@ -17,10 +17,14 @@ try{
   console.error('Koneksi ke database gagal:', err);
 }
 
+
 const PORT = process.env.PORT || 5000;
 const app = express();
-app.use(cors())
-app.use(cookieParser());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+})); // harusnya 'https://e-03-452916.et.r.appspot.com/'
+app.use(cookieParser()); 
 app.use(express.json())
 app.use(UserRoute);
 

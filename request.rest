@@ -28,7 +28,7 @@ DELETE http://localhost:5000/users/1
 
 ###
 GET http://localhost:5000/auth
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInVzZXJOYW1lIjoiaGFiaWIiLCJ1c2VyRW1haWwiOiJoYWJpYmFubmFmaUBnbWFpbC5jb20iLCJpYXQiOjE3NDc2NTU5ODYsImV4cCI6MTc0NzY1NjAxNn0.ANyRBbxAPx5tXEK3ZCIlI3blP5C6HAiEvGDN1rVyG5k
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJOYW1lIjoiaGFiaWIiLCJ1c2VyRW1haWwiOiJoYWJpYmFubmFmaUBnbWFpbC5jb20iLCJpYXQiOjE3NDc3NDE2ODcsImV4cCI6MTc0Nzc0MTcxN30.Swm7M8XbY3JXSd2WHCmXfHn3rq_OFBwSTPvBkwoz4PQ
 
 ###
 POST http://localhost:5000/register
@@ -57,3 +57,4 @@ GET http://localhost:5000/token
 
 ###
 DELETE http://localhost:5000/logout
+

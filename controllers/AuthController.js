@@ -6,7 +6,7 @@ export const getAuth = async (req, res) => {
     try {
         const auth = await Auth.findAll(
             {
-                attributes: ['id', 'username', 'email']
+                attributes: ['id', 'username', 'email'],
             }
         );
         res.json(auth);
@@ -72,7 +72,7 @@ export const Login = async (req, res) => {
         });
 
         // Send the access token in the response
-        res.json({ accesstoken });
+        res.json({accesstoken});
     } catch (error) {
         console.log(error);  // Log the error for debugging
         res.status(400).json({ msg: "Terjadi kesalahan saat login" });
@@ -91,7 +91,7 @@ export const Logout = async (req, res) => {
     const userId = auth.id;
     await Auth.update({ refresh_token: null }, {
         where: {
-            id: auth.id
+            id: userId
         }
     });
     res.clearCookie('refreshtoken', { httpOnly: true, sameSite: 'None', secure: true });

@@ -19,15 +19,15 @@ import {refreshtoken} from "../controllers/RefreshTokenController.js";
 
 const router = express.Router();
 
-router.get('/users', getUsers);
+router.get('/users' ,verifyToken , getUsers);
 router.get('/users/:id', getUserById);
 router.post('/users/', createUser);
 router.patch('/users/:id', updateUser);
-router.delete('/users/:id', deleteUser);
+router.delete('/users/:id', deleteUser); 
 router.post('/register', Register);
 router.get('/auth',verifyToken, getAuth);
 router.post('/login', Login);
-router.get('/token', refreshtoken);
+router.get('/token', refreshtoken); //refresh token
 router.delete('/logout', Logout);
 
 export default router;
