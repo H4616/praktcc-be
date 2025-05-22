@@ -21,9 +21,9 @@ try{
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors({
-  origin: "https://e-03-452916.et.r.appspot.com/",
+  origin: "https://e-03-452916.et.r.appspot.com",
   credentials: true
-}));  
+}));
 app.use(cookieParser()); 
 app.use(express.json())
 app.use(UserRoute);
