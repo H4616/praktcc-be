@@ -18,7 +18,7 @@ export const getAuth = async (req, res) => {
 
 export const Register = async (req, res) => {
     const {username, email, password, confirmPassword} = req.body;
-    if (!username || !password || !email || !confrimPassword) return res.status(400).json({msg: "Silahkan isi semua field"});
+    if (!username || !password || !email || !confirmPassword) return res.status(400).json({msg: "Silahkan isi semua field"});
     if (password !== confirmPassword) return res.status(400).json({msg: "Password tidak sama"});
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
