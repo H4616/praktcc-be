@@ -80,7 +80,6 @@ export const Login = async (req, res) => {
 		// Set the refresh token in a cookie
 		res.cookie("refreshtoken", refreshtoken, {
 			httpOnly: true, // Cookie hanya dapat diakses oleh server
-			secure: process.env.NODE_ENV === "production", // Harus true jika menggunakan HTTPS
 			sameSite: "None", // Agar cookie dapat digunakan lintas domain
 			maxAge: 24 * 60 * 60 * 1000, // 1 hari
 		});
