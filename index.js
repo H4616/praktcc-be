@@ -22,10 +22,8 @@ try{
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:3000',  // Ganti dengan URL frontend kamu
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Pastikan semua metode HTTP yang diperlukan diizinkan
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,  // Harus true agar cookies dapat dikirim
+  origin: "https://e-03-452916.et.r.appspot.com",
+  credentials: true 
 }));
 app.use(cookieParser()); 
 app.use(express.json())
