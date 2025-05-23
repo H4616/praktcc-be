@@ -9,6 +9,7 @@ import UserRoute from "./routes/UserRoute.js";
 
 
 
+
 try{
   await db.authenticate();
   console.log('Koneksi ke database berhasil!');
