@@ -5,7 +5,7 @@ export const refreshtoken = async(req, res)=>{
     console.log(req.cookies)
     try{
         const refreshtoken = req.cookies.refreshtoken;
-        if(!refreshtoken) return res.sendStatus(401);
+        if(!refreshtoken) return res.sendStatus(401).json({ msg: "No refresh token found" });;
         const auth = await Auth.findOne({
             where:{
                 refresh_token: refreshtoken
